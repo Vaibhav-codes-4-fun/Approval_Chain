@@ -1,0 +1,52 @@
+﻿@model Approval_Chain.Models.RequestModel
+
+@{
+    ViewBag.Title = "Employee Request";
+}
+
+<h2>Employee Request Form</h2>
+
+@using (Html.BeginForm("ProcessRequest", "Request", FormMethod.Post))
+{
+    <div>
+        <label for="EmployeeEmail">Employee Email:</label>
+        @Html.TextBoxFor(model => model.EmployeeEmail, new { type = "email", required = "required" })
+    </div>
+    <div>
+        <br />
+        <label for="Topic">Topic:</label>
+        @Html.TextBoxFor(model => model.Topic, new { required = "required" })
+    </div>
+    <div id="approversContainer">
+        <br />
+        <div>
+            <input type="button" value="Add Approvers" onclick="addApproverTextBox()" />
+        </div>
+        <br/>
+        <label for="ApproverEmail">Approver Email:
+            @Html.TextBoxFor(model => model.ApproverEmail, new { type = "email", required = "required" })
+        </label>
+        <br />
+    </div>
+    
+    <div>
+        <br/>
+        <input type="submit" value="Submit Request" />
+    </div>
+}
+
+@section scripts {
+    <script>
+        function addApproverTextBox() {
+            var container = document.getElementById("approversContainer");
+            var newTextBox = document.createElement("input");
+            newTextBox.type = "email";
+            newTextBox.name = "ApproverEmails";
+            newTextBox.placeholder = "Enter Approver Email";
+            newTextBox.required = true;
+            container.appendChild(document.createElement("br")); 
+            container.appendChild(newTextBox);
+            container.appendChild(document.createElement("br"));
+        }
+    </script>
+}
