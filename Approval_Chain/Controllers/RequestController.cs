@@ -32,7 +32,7 @@ public class RequestController : Controller
          var smtpClient = new SmtpClient("smtp-relay.brevo.com")
             {
                Port = 587,
-               Credentials = new NetworkCredential("vaibhav.upasani24@gmail.com", "xsmtpsib-5bfec43a40a131f1875f2204942dced0de7305964c7d13745addea32de1c7a0f-np6HV8WGvX31Igwt"),
+               Credentials = new NetworkCredential("vaibhav.upasani24@gmail.com", "xsmtpsib-5bfec43a40a131f1875f2204942dced0de7305964c7d13745addea32de1c7a0f-hm1DjBpVSqEgfxra"),
                EnableSsl = true,
             };
 

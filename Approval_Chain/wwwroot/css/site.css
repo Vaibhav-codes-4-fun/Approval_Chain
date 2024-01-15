@@ -1,13 +1,53 @@
 html {
+
   font-size: 14px;
 }
+#empemail{
+    color:indianred;
+}
+#topic{
+    color:midnightblue;
+}
+.container-fluid{
+    height:80px;
+    background-color:orchid;
+    font-size:24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:100%;
 
+}
+#approversContainer {
+    color: mediumblue;
+}
+#addapprovers{
+    color:indianred;
+    background-color:gold;
+}
+#addapprovers:hover{
+    background-color:aquamarine;
+}
+#ApprovalChain{
+    padding-left:24px;
+    padding-top: 12px;
+    background-color:lemonchiffon;
+    display:flex;
+    flex-direction:column;
+    flex-basis:auto;
+    align-content:space-evenly;
+    align-items:flex-start;
+    flex-grow:4;
+    font-size:24px;
+    font-family:'Arial Rounded MT';
+
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
-
+#chainform{
+    
+}
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -15,8 +55,22 @@ html {
 html {
   position: relative;
   min-height: 100%;
+
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: lawngreen;
+}
+#submitbtn {
+    background-color:springgreen;
+    color:gray;
+    margin: 12px;    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: rotate();
+}
+#submitbtn:hover {
+    background-color: red;
 }

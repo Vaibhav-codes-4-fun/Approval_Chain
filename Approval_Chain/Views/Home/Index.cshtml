@@ -3,16 +3,16 @@
 @{
     ViewBag.Title = "Employee Request";
 }
-
+<div id="chainform">
 <h2>Employee Request Form</h2>
 
 @using (Html.BeginForm("ProcessRequest", "Request", FormMethod.Post))
-{
-    <div>
+{<div id="ApprovalChain">
+    <div id="empemail">
         <label for="EmployeeEmail">Employee Email:</label>
         @Html.TextBoxFor(model => model.EmployeeEmail, new { type = "email", required = "required" })
     </div>
-    <div>
+    <div id="topic">
         <br />
         <label for="Topic">Topic:</label>
         @Html.TextBoxFor(model => model.Topic, new { required = "required" })
@@ -20,7 +20,7 @@
     <div id="approversContainer">
         <br />
         <div>
-            <input type="button" value="Add Approvers" onclick="addApproverTextBox()" />
+                <input type="button" id="addapprovers" value="Add Approvers" onclick="addApproverTextBox()" />
         </div>
         <br/>
         <label for="ApproverEmail">Approver Email:
@@ -29,12 +29,13 @@
         <br />
     </div>
     
-    <div>
+    <div > 
         <br/>
-        <input type="submit" value="Submit Request" />
+            <input type="submit" id="submitbtn" value="Submit Request" />
     </div>
+</div>
 }
-
+</div>
 @section scripts {
     <script>
         function addApproverTextBox() {
